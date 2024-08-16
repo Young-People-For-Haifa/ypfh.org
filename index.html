@@ -51,12 +51,12 @@
         }
         .logo-row img {
             margin: 0 15px;
-            max-width: 150px; /* Увеличено с 100px до 150px */
+            max-width: 150px;
             cursor: pointer;
         }
         .community-button {
             padding: 10px 20px;
-            background-color: #1d2a57; /* Измененный цвет */
+            background-color: #1d2a57;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -70,33 +70,34 @@
         footer {
             padding: 10px;
             background-color: #1d2a57;
-            color: white; /* Изменение цвета текста на белый */
+            color: white;
+        }
+        #social-media {
+            margin-bottom: 60px;
         }
         #social-media img {
             margin: 0 10px;
             max-width: 30px;
         }
-        /* Новые стили для секции мероприятий */
         #events {
             padding: 20px;
         }
         #events iframe {
             width: 100%;
             height: 600px;
-            max-width: 1200px; /* Устанавливаем максимальную ширину для больших экранов */
+            max-width: 1200px;
             border: 0;
         }
         .map-wrapper {
             margin: 20px auto;
             width: 100%;
-            max-width: 1200px; /* Устанавливаем максимальную ширину контейнера для больших экранов */
+            max-width: 1200px;
         }
         .event-info {
             margin-top: 15px;
             font-style: italic;
             color: #555;
         }
-        /* Стили для выбора языка */
         .language-selector {
             display: flex;
         }
@@ -105,10 +106,21 @@
             text-decoration: none;
             margin-left: 10px;
         }
-        /* Стили для логотипа в меню */
         .logo-in-nav img {
-            max-width: 100px; /* Увеличено в два раза */
+            max-width: 100px;
             margin-left: 15px;
+        }
+        #Home p {
+            text-align: left;
+            margin: 0 auto 20px;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        #Home h1 {
+            margin-bottom: 20px;
+        }
+        #Home p strong {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -124,7 +136,7 @@
     </div>
     <div class="center-section">
         <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="#Home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -134,37 +146,33 @@
     </div>
 </nav>
 
-<section id="about">
+<section id="Home">
     <h1>Young People For Haifa</h1>
-    <p>We are non-profit organization dedicated to improving our city through various initiatives and community projects.</p>
+    <p><strong>Young People for Haifa (YPFH)</strong> is a non-profit organization based in Haifa, Israel, that is committed to empowering young people to become active and engaged citizens in their communities. Founded in 2021, YPFH aims to create a culture of social responsibility and civic engagement among youth, with a focus on promoting diversity, equality, and social justice.</p>
+    <p>Overall, <strong>Young People for Haifa</strong> is a dynamic and innovative organization that is making a real difference in the lives of young people in Haifa and beyond. Through its programs and initiatives, YPFH is empowering young people to become leaders and change-makers in their communities and to work together to create a brighter, more just future for all.</p>
 </section>
 
-<section id="projects" class="logo-row">
-    <a href="https://app.ypfh.org/" target="_blank"><img src="media/Steel_swords_ypfh.png" alt="Logo 1"></a>
-    <a href="https://sea.ypfh.org/" target="_blank"><img src="media/logo_sea_ypfh_white.png" alt="Logo 2"></a>
-    <a href="https://edu.ypfh.org/" target="_blank"><img src="media/edu_logo.png" alt="Logo 3"></a>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="logo-row">
+        <a href="https://app.ypfh.org/" target="_blank"><img src="media/Steel_swords_ypfh.png" alt="Logo 1"></a>
+        <a href="https://sea.ypfh.org/" target="_blank"><img src="media/logo_sea_ypfh_white.png" alt="Logo 2"></a>
+        <a href="https://edu.ypfh.org/" target="_blank"><img src="media/edu_logo.png" alt="Logo 3"></a>
+    </div>
 </section>
 
 <section>
     <a class="community-button" href="https://nas.io/youngpeopleforhaifa" target="_blank">Join Our Community</a>
 </section>
 
-<section id="gallery">
-    <h2>Галерея</h2>
-    <div class="gallery-images">
-        <img src="path_to_image1.jpg" alt="Описание изображения 1">
-        <img src="path_to_image2.jpg" alt="Описание изображения 2">
-        <img src="path_to_image3.jpg" alt="Описание изображения 3">
-    </div>
-</section>
 
 <section id="events">
-    <h2>Предстоящие мероприятия</h2>
-    <p>Следите за нашими предстоящими мероприятиями на карте ниже:</p>
+    <h2>Upcoming Events</h2>
+    <p>Follow our upcoming events in our calendar below:</p>
     <div class="map-wrapper">
         <iframe src="https://calendar.google.com/calendar/embed?src=youngpeopleforhaifa%40gmail.com&ctz=Asia%2FJerusalem" frameborder="0" scrolling="no"></iframe>
     </div>
-    <p class="event-info">Нажмите на события на карте, чтобы узнать больше о наших мероприятиях и как принять в них участие.</p>
+    <p class="event-info">Click on the events in the calendar to save them to your own calendar and make sure you don't miss them.</p>
 </section>
 
 <section id="social-media">
