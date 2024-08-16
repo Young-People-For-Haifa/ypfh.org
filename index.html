@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF+3">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Young People For Haifa</title>
     <style>
@@ -40,9 +40,15 @@
             text-decoration: none;
             padding: 10px 15px;
             display: block;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f8f8f8;
         }
         section {
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .logo-row {
             display: flex;
@@ -62,13 +68,18 @@
             border-radius: 5px;
             display: inline-block;
             margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .community-button:hover {
+            background-color: #16203e;
         }
         .gallery-images img {
             margin: 10px;
             max-width: 200px;
         }
         footer {
-            padding: 10px;
+            padding: 20px;
             background-color: #1d2a57;
             color: white;
         }
@@ -105,6 +116,10 @@
             color: white;
             text-decoration: none;
             margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+        .language-selector a:hover {
+            color: #f8f8f8;
         }
         .logo-in-nav img {
             max-width: 100px;
@@ -142,7 +157,7 @@
         </ul>
     </div>
     <div class="right-section logo-in-nav">
-        <img src="media/logoheader.png" alt="Logo">
+        <img src="media/logoheader.png" alt="Young People For Haifa Logo">
     </div>
 </nav>
 
@@ -155,16 +170,15 @@
 <section id="projects">
     <h2>Projects</h2>
     <div class="logo-row">
-        <a href="https://app.ypfh.org/" target="_blank"><img src="media/Steel_swords_ypfh.png" alt="Logo 1"></a>
-        <a href="https://sea.ypfh.org/" target="_blank"><img src="media/logo_sea_ypfh_white.png" alt="Logo 2"></a>
-        <a href="https://edu.ypfh.org/" target="_blank"><img src="media/edu_logo.png" alt="Logo 3"></a>
+        <a href="https://app.ypfh.org/" target="_blank"><img src="media/Steel_swords_ypfh.png" alt="Project Logo 1"></a>
+        <a href="https://sea.ypfh.org/" target="_blank"><img src="media/logo_sea_ypfh_white.png" alt="Project Logo 2"></a>
+        <a href="https://edu.ypfh.org/" target="_blank"><img src="media/edu_logo.png" alt="Project Logo 3"></a>
     </div>
 </section>
 
 <section>
     <a class="community-button" href="https://nas.io/youngpeopleforhaifa" target="_blank">Join Our Community</a>
 </section>
-
 
 <section id="events">
     <h2>Upcoming Events</h2>
