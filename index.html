@@ -29,11 +29,14 @@
             display: block;
         }
         header {
-            padding: 20px;
+            padding: 0; /* Убираем отступы для шапки */
             background-color: #f8f8f8;
+            width: 100%;
         }
         header img {
-            max-width: 150px;
+            width: 100%; /* Растягиваем изображение на всю ширину */
+            height: auto; /* Сохраняем пропорции изображения */
+            display: block; /* Убираем возможные пробелы снизу изображения */
         }
         section {
             padding: 20px;
@@ -102,7 +105,7 @@
 </nav>
 
 <header>
-    <img src="/home/user/ypfh/media/logoheader.png" alt="Young People For Haifa Logo">
+    <img src="media/logoheader.png" alt="Young People For Haifa Logo">
 </header>
 
 <section id="about">
