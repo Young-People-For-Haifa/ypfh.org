@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF+3">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Young People For Haifa</title>
     <style>
@@ -15,8 +15,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #333;
+            background-color: #1d2a57;
             padding: 10px 20px;
+        }
+        nav .left-section, nav .center-section, nav .right-section {
+            display: flex;
+            align-items: center;
+        }
+        nav .center-section {
+            flex-grow: 1;
+            justify-content: center;
         }
         nav ul {
             list-style: none;
@@ -25,24 +33,13 @@
             display: flex;
         }
         nav ul li {
-            margin: 0 10px; /* Уменьшение отступов между пунктами меню */
+            margin: 0 15px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 8px 10px; /* Уменьшение внутреннего отступа */
+            padding: 10px 15px;
             display: block;
-            font-size: 14px; /* Уменьшение размера шрифта, если требуется */
-        }
-        header {
-            padding: 0; /* Убираем отступы для шапки */
-            background-color: #f8f8f8;
-            width: 100%;
-        }
-        header img {
-            width: 100%; /* Растягиваем изображение на всю ширину */
-            height: auto; /* Сохраняем пропорции изображения */
-            display: block; /* Убираем возможные пробелы снизу изображения */
         }
         section {
             padding: 20px;
@@ -105,30 +102,36 @@
         .language-selector a {
             color: white;
             text-decoration: none;
-            margin-left: 5px; /* Уменьшение отступов между языковыми кнопками */
-            padding: 8px 10px; /* Уменьшение внутреннего отступа */
-            font-size: 14px; /* Уменьшение размера шрифта, если требуется */
+            margin-left: 10px;
+        }
+        /* Стили для логотипа в меню */
+        .logo-in-nav img {
+            max-width: 100px; /* Увеличено в два раза */
+            margin-left: 15px;
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <ul>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#projects">Проекты</a></li>
-        <li><a href="#contact">Контакты</a></li>
-    </ul>
-    <div class="language-selector">
-        <a href="?lang=he">HE</a>
-        <a href="?lang=ru">RU</a>
-        <a href="?lang=en">EN</a>
+    <div class="left-section">
+        <div class="language-selector">
+            <a href="?lang=he">HE</a>
+            <a href="?lang=ru">RU</a>
+            <a href="?lang=en">EN</a>
+        </div>
+    </div>
+    <div class="center-section">
+        <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="right-section logo-in-nav">
+        <img src="media/logoheader.png" alt="Logo">
     </div>
 </nav>
-
-<header>
-    <img src="media/logoheader.png" alt="Young People For Haifa Logo">
-</header>
 
 <section id="about">
     <h1>About Us</h1>
