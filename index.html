@@ -11,22 +11,28 @@
             padding: 0;
             text-align: center;
         }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
         nav ul {
             list-style: none;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            background-color: #333;
             margin: 0;
+            display: flex;
         }
         nav ul li {
-            margin: 0 15px;
+            margin: 0 10px; /* Уменьшение отступов между пунктами меню */
         }
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 8px 10px; /* Уменьшение внутреннего отступа */
             display: block;
+            font-size: 14px; /* Уменьшение размера шрифта, если требуется */
         }
         header {
             padding: 0; /* Убираем отступы для шапки */
@@ -53,7 +59,7 @@
         }
         .community-button {
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #1d2a57; /* Измененный цвет */
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -66,7 +72,7 @@
         }
         footer {
             padding: 10px;
-            background-color: #f8f8f8;
+            background-color: #1d2a57;
         }
         #social-media img {
             margin: 0 10px;
@@ -92,6 +98,17 @@
             font-style: italic;
             color: #555;
         }
+        /* Стили для выбора языка */
+        .language-selector {
+            display: flex;
+        }
+        .language-selector a {
+            color: white;
+            text-decoration: none;
+            margin-left: 5px; /* Уменьшение отступов между языковыми кнопками */
+            padding: 8px 10px; /* Уменьшение внутреннего отступа */
+            font-size: 14px; /* Уменьшение размера шрифта, если требуется */
+        }
     </style>
 </head>
 <body>
@@ -102,6 +119,11 @@
         <li><a href="#projects">Проекты</a></li>
         <li><a href="#contact">Контакты</a></li>
     </ul>
+    <div class="language-selector">
+        <a href="?lang=he">HE</a>
+        <a href="?lang=ru">RU</a>
+        <a href="?lang=en">EN</a>
+    </div>
 </nav>
 
 <header>
