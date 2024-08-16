@@ -1,1 +1,1 @@
-A simple HTML/JS/CSS starter template
+Main website of Young People For Haifa
