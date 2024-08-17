@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Young People for Haifa (YPFH) is a non-profit organization based in Haifa, Israel, that is committed to empowering young people to become active and engaged citizens in their communities.">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="time-zone" content="Asia/Jerusalem">
     <title>Young People For Haifa</title>
     <style>
         body {
@@ -10,6 +13,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            line-height: 1.8;
         }
         nav {
             display: flex;
@@ -17,36 +21,56 @@
             align-items: center;
             background-color: #1d2a57;
             padding: 10px 20px;
-            flex-wrap: wrap;
-        }
-        nav .left-section, nav .center-section, nav .right-section {
-            display: flex;
-            align-items: center;
         }
         nav .center-section {
-            flex-grow: 1;
+            display: flex;
             justify-content: center;
+            flex-grow: 1;
         }
-        nav ul {
+        nav .center-section ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            gap: 20px;
         }
-        nav ul li {
-            margin: 5px 10px;
-        }
-        nav ul li a {
+        nav .center-section ul li a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             display: block;
             transition: color 0.3s ease;
         }
-        nav ul li a:hover {
+        nav .center-section ul li a:hover {
             color: #f8f8f8;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .center-section ul {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                text-align: center;
+            }
+            .center-section.active ul {
+                display: flex;
+            }
+            .right-section {
+                display: none;
+            }
         }
         section {
             padding: 20px;
@@ -59,10 +83,14 @@
             margin: 20px 0;
             flex-wrap: wrap;
         }
-        .logo-row img {
+        .logo-row div {
+            text-align: center;
             margin: 10px 15px;
+        }
+        .logo-row img {
             max-width: 150px;
             cursor: pointer;
+            loading: lazy;
         }
         .community-button {
             padding: 10px 20px;
@@ -87,6 +115,7 @@
             margin: 10px;
             max-width: 100%;
             height: auto;
+            loading: lazy;
         }
         footer {
             padding: 20px;
@@ -99,6 +128,7 @@
         #social-media img {
             margin: 0 10px;
             max-width: 30px;
+            loading: lazy;
         }
         #events {
             padding: 20px;
@@ -141,7 +171,7 @@
             text-align: left;
             margin: 0 auto 20px;
             max-width: 800px;
-            line-height: 1.6;
+            line-height: 1.8;
         }
         #Home h1 {
             margin-bottom: 20px;
@@ -154,12 +184,12 @@
             nav {
                 flex-direction: column;
             }
-            nav ul {
+            .logo-in-nav img {
+                max-width: 50px;
+            }
+            .center-section ul {
                 flex-direction: column;
                 align-items: center;
-            }
-            nav ul li {
-                margin: 5px 0;
             }
             .community-button {
                 width: 100%;
@@ -183,6 +213,9 @@
                 max-width: 100%;
             }
         }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -199,26 +232,40 @@
         <ul>
             <li><a href="#Home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#events">Events</a></li>
         </ul>
     </div>
     <div class="right-section logo-in-nav">
-        <img src="media/logoheader.png" alt="Young People For Haifa Logo">
+        <a href="#Home"><img src="media/logoheader.png" alt="Young People For Haifa Logo"></a>
+    </div>
+    <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 </nav>
 
 <section id="Home">
     <h1>Young People For Haifa</h1>
-    <p><strong>Young People for Haifa (YPFH)</strong> is a non-profit organization based in Haifa, Israel, that is committed to empowering young people to become active and engaged citizens in their communities. Founded in 2021, YPFH aims to create a culture of social responsibility and civic engagement among youth, with a focus on promoting diversity, equality, and social justice.</p>
+    <p><strong>Young People for Haifa (YPFH)</strong> is a non-profit organization based in Haifa, Israel, that is committed to empowering young people to become active and engaged citizens in their communities.</p>
     <p>Overall, <strong>Young People for Haifa</strong> is a dynamic and innovative organization that is making a real difference in the lives of young people in Haifa and beyond. Through its programs and initiatives, YPFH is empowering young people to become leaders and change-makers in their communities and to work together to create a brighter, more just future for all.</p>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
     <div class="logo-row">
-        <a href="https://app.ypfh.org/" target="_blank"><img src="media/Steel_swords_ypfh.png" alt="Project Logo 1"></a>
-        <a href="https://sea.ypfh.org/" target="_blank"><img src="media/logo_sea_ypfh_white.png" alt="Project Logo 2"></a>
-        <a href="https://edu.ypfh.org/" target="_blank"><img src="media/edu_logo.png" alt="Project Logo 3"></a>
+        <div>
+            <a href="https://app.ypfh.org/" target="_blank"><img src="media/Steel_swords_ypfh.png" alt="Iron Swords Logo"></a>
+            <p>Iron Swords</p>
+        </div>
+        <div>
+            <a href="https://sea.ypfh.org/" target="_blank"><img src="media/logo_sea_ypfh_white.png" alt="CleanUp Logo"></a>
+            <p>CleanUp</p>
+        </div>
+        <div>
+            <a href="https://edu.ypfh.org/" target="_blank"><img src="media/edu_logo.png" alt="Education Logo"></a>
+            <p>Education</p>
+        </div>
     </div>
 </section>
 
@@ -248,6 +295,15 @@
 <footer>
     <p>&copy; 2024 Young People For Haifa.</p>
 </footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.center-section');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
