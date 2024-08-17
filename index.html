@@ -17,31 +17,56 @@
         }
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             background-color: #1d2a57;
             padding: 10px 20px;
+            flex-wrap: wrap;
         }
-        nav .center-section {
+        .left-section, .center-section, .right-section {
+            display: flex;
+            align-items: center;
+        }
+        .center-section {
+            margin: 0 20px; /* Добавляем отступы, чтобы меню и языки были ближе к логотипу */
+        }
+        .language-selector {
             display: flex;
             justify-content: center;
-            flex-grow: 1;
+            flex-wrap: wrap;
+            margin-right: 20px; /* Смещаем языки ближе к логотипу */
         }
-        nav .center-section ul {
+        .language-selector a {
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+        }
+        .language-selector a:hover {
+            color: #f8f8f8;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            margin-left: 20px; /* Смещаем главное меню ближе к логотипу */
+        }
+        .nav-links ul {
+            display: flex;
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            gap: 20px;
         }
-        nav .center-section ul li a {
+        .nav-links ul li {
+            margin: 0 10px;
+        }
+        .nav-links ul li a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             display: block;
             transition: color 0.3s ease;
         }
-        nav .center-section ul li a:hover {
+        .nav-links ul li a:hover {
             color: #f8f8f8;
         }
         .hamburger {
@@ -53,23 +78,29 @@
             width: 25px;
             height: 3px;
             background-color: white;
-            margin: 4px;
+            margin: 4px 0;
+        }
+        .logo-in-nav img {
+            max-width: 160px; /* Увеличиваем логотип в 2 раза */
         }
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
             .hamburger {
                 display: flex;
             }
-            .center-section ul {
+            .nav-links.active {
+                display: flex;
                 flex-direction: column;
-                display: none;
                 width: 100%;
                 text-align: center;
             }
-            .center-section.active ul {
-                display: flex;
+            .nav-links ul {
+                flex-direction: column;
             }
-            .right-section {
-                display: none;
+            .right-section img {
+                max-width: 80px; /* В мобильной версии размер логотипа уменьшается */
             }
         }
         section {
@@ -149,24 +180,6 @@
             font-style: italic;
             color: #555;
         }
-        .language-selector {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .language-selector a {
-            color: white;
-            text-decoration: none;
-            margin-left: 10px;
-            transition: color 0.3s ease;
-        }
-        .language-selector a:hover {
-            color: #f8f8f8;
-        }
-        .logo-in-nav img {
-            max-width: 80px;
-            margin-left: 15px;
-        }
         #Home p {
             text-align: left;
             margin: 0 auto 20px;
@@ -179,27 +192,33 @@
         #Home p strong {
             font-weight: bold;
         }
-
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
+            .left-section {
+                order: 1;
             }
-            .logo-in-nav img {
-                max-width: 50px;
-            }
-            .center-section ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            .community-button {
+            .center-section {
+                order: 2;
                 width: 100%;
-                max-width: 300px;
+                justify-content: center;
             }
-            .logo-row img {
-                max-width: 120px;
+            .right-section {
+                order: 3;
+                justify-content: flex-end;
+            }
+            .hamburger {
+                order: 1;
+            }
+            .logo-in-nav {
+                order: 3;
+            }
+            .nav-links ul {
+                display: none;
+                flex-direction: column;
+            }
+            .nav-links.active ul {
+                display: flex;
             }
         }
-
         @media (max-width: 480px) {
             .community-button {
                 padding: 10px;
@@ -221,22 +240,20 @@
 <body>
 
 <nav>
-    <div class="left-section">
-        <div class="language-selector">
-            <a href="?lang=he">HE</a>
-            <a href="?lang=ru">RU</a>
-            <a href="?lang=en">EN</a>
-        </div>
+    <div class="left-section language-selector">
+        <a href="?lang=he">HE</a>
+        <a href="?lang=ru">RU</a>
+        <a href="?lang=en">EN</a>
     </div>
-    <div class="center-section">
+    <div class="center-section logo-in-nav">
+        <a href="#Home"><img src="media/logoheader.png" alt="Young People For Haifa Logo"></a>
+    </div>
+    <div class="right-section nav-links">
         <ul>
             <li><a href="#Home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#events">Events</a></li>
         </ul>
-    </div>
-    <div class="right-section logo-in-nav">
-        <a href="#Home"><img src="media/logoheader.png" alt="Young People For Haifa Logo"></a>
     </div>
     <div class="hamburger">
         <div></div>
@@ -298,7 +315,7 @@
 
 <script>
     const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.center-section');
+    const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
