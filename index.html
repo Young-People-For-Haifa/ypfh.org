@@ -118,7 +118,7 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center; /* Центрируем все элементы внутри секции */
+            text-align: center;
         }
         .logo-row {
             display: flex;
@@ -168,7 +168,7 @@
         }
         #social-media {
             margin-bottom: 60px;
-            text-align: center; /* Центрируем кнопки социальных сетей */
+            text-align: center;
         }
         #social-media img {
             margin: 0 10px;
@@ -307,7 +307,7 @@
     <div class="map-wrapper">
         <iframe src="https://calendar.google.com/calendar/embed?src=youngpeopleforhaifa%40gmail.com&ctz=Asia%2FJerusalem" frameborder="0" scrolling="no"></iframe>
     </div>
-    <p class="event-info">Click on the events in the calendar to save them to your own calendar and make sure you don't miss them.</p>
+    <p class="event-info" id="events-info">Click on the events in the calendar to save them to your own calendar and make sure you don't miss them.</p>
 </section>
 
 <section id="social-media">
@@ -336,7 +336,8 @@
             projectsTitle: "Projects",
             eventsTitle: "Upcoming Events",
             socialMediaTitle: "Follow us",
-            eventsDescription: "Follow our upcoming events in our calendar below:"
+            eventsDescription: "Follow our upcoming events in our calendar below:",
+            eventsInfo: "Click on the events in the calendar to save them to your own calendar and make sure you don't miss them."
         },
         ru: {
             navHome: "Главная",
@@ -348,7 +349,8 @@
             projectsTitle: "Проекты",
             eventsTitle: "Предстоящие События",
             socialMediaTitle: "Подписывайтесь на нас",
-            eventsDescription: "Следите за нашими предстоящими событиями в календаре ниже:"
+            eventsDescription: "Следите за нашими предстоящими событиями в календаре ниже:",
+            eventsInfo: "Нажмите на события в календаре, чтобы сохранить их в своем календаре и убедитесь, что вы их не пропустите."
         },
         he: {
             navHome: "בית",
@@ -360,7 +362,8 @@
             projectsTitle: "פרויקטים",
             eventsTitle: "אירועים קרובים",
             socialMediaTitle: "עקוב אחרינו",
-            eventsDescription: "עקוב אחר האירועים הקרובים שלנו בלוח השנה למטה:"
+            eventsDescription: "עקוב אחר האירועים הקרובים שלנו בלוח השנה למטה:",
+            eventsInfo: "לחץ על האירועים בלוח השנה כדי לשמור אותם בלוח השנה שלך ולוודא שלא תפספס אותם."
         }
     };
 
@@ -377,6 +380,7 @@
         document.getElementById('events-title').innerText = language.eventsTitle;
         document.getElementById('social-media-title').innerText = language.socialMediaTitle;
         document.getElementById('events-description').innerText = language.eventsDescription;
+        document.getElementById('events-info').innerText = language.eventsInfo;
 
         if (lang === 'he') {
             document.body.classList.remove('english', 'russian');
