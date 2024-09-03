@@ -1,7 +1,1 @@
-Young People for Haifa (YPFH) is a non-profit organization based in Haifa, Israel, that is committed to empowering young people to become active and engaged citizens in their communities. Founded in 2021, YPFH aims to create a culture of social responsibility and civic engagement among youth, with a focus on promoting diversity, equality, and social justice.
 
-The organization provides a platform for young people to develop leadership skills, participate in community service projects, and engage in advocacy efforts on issues that matter to them. YPFH’s programs are designed to foster critical thinking, creativity, and collaboration among young people, while also encouraging them to be proactive in addressing social and environmental challenges in their communities.
-
-One of the important programs offered by YPFH is the Youth Leadership Academy, which provides training and mentorship to young people who are interested in becoming effective leaders in their communities. The academy is designed to develop skills such as public speaking, project management, and team-building, and to give young people the tools they need to create positive change in their communities.
-
-Overall, Young People for Haifa is a dynamic and innovative organization that is making a real difference in the lives of young people in Haifa and beyond. Through its programs and initiatives, YPFH is empowering young people to become leaders and change-makers in their communities and to work together to create a brighter, more just future for all.
