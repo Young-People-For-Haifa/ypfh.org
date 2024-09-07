@@ -14,6 +14,11 @@ body.hebrew #Home p {
     text-align: right;
 }
 
+/* Отключаем зеркалирование навигации */
+body.hebrew nav {
+    direction: ltr;
+}
+
 body.english, body.russian {
     direction: ltr;
     text-align: left;
