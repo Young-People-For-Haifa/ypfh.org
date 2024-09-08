@@ -1,3 +1,4 @@
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,9 +15,8 @@ body.hebrew #Home p {
     text-align: right;
 }
 
-/* Отключаем зеркалирование навигации */
 body.hebrew nav {
-    direction: ltr;
+    direction: ltr; /* Отключаем зеркалирование навигации */
 }
 
 body.english, body.russian {
@@ -30,6 +30,7 @@ nav {
     align-items: center;
     background-color: #1d2a57;
     padding: 10px 120px;
+    position: relative; /* Добавляем позиционирование для выпадающего меню */
 }
 
 .left-section {
@@ -81,6 +82,7 @@ nav {
 
 .nav-links ul li {
     margin: 0 0px;
+    position: relative; /* Позиционирование для выпадающего меню */
 }
 
 .nav-links ul li a {
@@ -116,6 +118,44 @@ h1, h2 {
     text-align: center;
 }
 
+/* Стили для выпадающего меню */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    visibility: hidden; /* Скрываем по умолчанию */
+    opacity: 0; /* Прозрачность */
+    display: none;
+    position: absolute;
+    background-color: #1d2a57;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Позиционируем под пунктом меню */
+    left: 0;
+    transition: visibility 0s, opacity 0.3s linear; /* Плавный переход */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible; /* Показываем при наведении */
+    opacity: 1; /* Убираем прозрачность */
+    display: block;
+}
+
+/* Стили для адаптивности */
 @media (max-width: 768px) {
     .nav-links {
         display: none;

@@ -8,7 +8,7 @@
     <meta name="time-zone" content="Asia/Jerusalem">
     <title>Young People For Haifa</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script> <!-- Подключаем файл main.js -->
+    <script src="main.js" defer></script> <!-- Подключаем main.js для смены языка -->
 </head>
 <body class="english">
 
@@ -24,7 +24,13 @@
     <div class="right-section nav-links">
         <ul>
             <li><a href="#Home" id="nav-home">Home</a></li>
-            <li><a href="#projects" id="nav-projects">Projects</a></li>
+            <li class="dropdown">
+                <a href="#" id="nav-projects">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="cleanup.html" id="nav-cleanup">CleanUp</a></li>
+                    <li><a href="iron-swords.html" id="nav-iron-swords">Iron Swords</a></li>
+                </ul>
+            </li>
             <li><a href="#events" id="nav-events">Events</a></li>
         </ul>
     </div>
@@ -45,11 +51,11 @@
     <h2 id="projects-title">Projects</h2>
     <div class="logo-row">
         <div>
-            <a href="https://app.ypfh.org/" target="_blank"><img src="media/Steel_swords_ypfh.png" alt="Iron Swords Logo"></a>
+            <a href="iron-swords.html" target="_blank"><img src="media/Steel_swords_ypfh.png" alt="Iron Swords Logo"></a>
             <p>Iron Swords</p>
         </div>
         <div>
-            <a href="https://sea.ypfh.org/" target="_blank"><img src="media/logo_sea_ypfh_white.png" alt="CleanUp Logo"></a>
+            <a href="cleanup.html" target="_blank"><img src="media/logo_sea_ypfh_white.png" alt="CleanUp Logo"></a>
             <p>CleanUp</p>
         </div>
     </div>
