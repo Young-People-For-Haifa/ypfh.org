@@ -112,6 +112,7 @@ const texts = {
 
 // Функция для смены языка
 function setLanguage(lang) {
+    localStorage.setItem('selectedLanguage', lang); // Сохраняем выбранный язык в localStorage
     const language = texts[lang];
 
     document.getElementById('nav-home').innerText = language.navHome;
@@ -157,5 +158,6 @@ function setLanguage(lang) {
 
 // Обновление контента при загрузке
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('en'); // По умолчанию английский
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Получаем сохранённый язык или используем английский по умолчанию
+    setLanguage(savedLanguage); // Устанавливаем язык
 });
