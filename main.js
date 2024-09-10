@@ -154,6 +154,19 @@ function setLanguage(lang) {
         document.body.classList.remove('hebrew', 'russian');
         document.body.classList.add('english');
     }
+
+    // Update links with the selected language
+    updateProjectLinks(lang);
+}
+
+// Функция для обновления ссылок на страницы проектов с выбранным языком
+function updateProjectLinks(lang) {
+    const baseUrl = window.location.origin;
+
+    document.getElementById('iron-swords-link').href = `${baseUrl}/iron-swords.html?lang=${lang}`;
+    document.getElementById('cleanup-link').href = `${baseUrl}/cleanup.html?lang=${lang}`;
+    document.getElementById('sport-link').href = `${baseUrl}/sport.html?lang=${lang}`;
+    document.getElementById('logo-link').href = `${baseUrl}/index.html?lang=${lang}`;
 }
 
 // Обновление контента при загрузке
