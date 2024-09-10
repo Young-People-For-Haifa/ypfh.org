@@ -10,6 +10,7 @@ const texts = {
         projectsTitle: "Projects",
         ironSwordsProject: "Iron Swords",
         cleanupProject: "CleanUp",
+        sportProject: "Sport",
         eventsTitle: "Upcoming Events",
         eventsDescription: "Follow our upcoming events in our calendar below:",
         eventsInfo: "Click on the events in the calendar to save them to your own calendar and make sure you don't miss them.",
@@ -26,6 +27,13 @@ const texts = {
         <p><strong>For international transactions</strong> - Bank name: BANK LEUMI B.M. Leumi's, Swift code: LUMIILITXXX, IBAN: IL42 0108 8000 0000 5826 806, Name: Young People for Haifa</p>
         <p><strong>For the residents of Israel</strong> - Bank Leumi, account number 05826806, branch code 880</p>
         <p>To deliver food, goods, and equipment, please bring them to the following address: 4 Rav Ohana Street, Hadar District</p>
+        `,
+        sportContent: `
+        <h1>Sport</h1>
+        <p>We invite you to join our free workouts 😃🏃🏽🏋🏼‍♀️</p>
+        <p><strong>Circuit Training:</strong> 📅 Monday, 21:00, 📍 Hecht Park. Strength, functional, and aerobic training led by Lisa! This workout is suitable for all fitness levels!</p>
+        <p><strong>Running Training:</strong> 📅 Friday, 8:00, 📍 Leonard Beach. Join Vladimir Berson for a morning run! We’ll run 5 km to the Marine Institute and back.</p>
+        <p>📝 Telegram group link: <a href="https://t.me/ypfh_sport" target="_blank">https://t.me/ypfh_sport</a></p>
         `
     },
     ru: {
@@ -38,6 +46,7 @@ const texts = {
         projectsTitle: "Проекты",
         ironSwordsProject: "Железные Мечи",
         cleanupProject: "Чистка",
+        sportProject: "Спорт",
         eventsTitle: "Предстоящие События",
         eventsDescription: "Следите за нашими предстоящими событиями в календаре ниже:",
         eventsInfo: "Нажмите на события в календаре, чтобы сохранить их в своем календаре и убедитесь, что вы их не пропустите.",
@@ -54,6 +63,13 @@ const texts = {
         <p><strong>Для международных переводов</strong> - Название банка: BANK LEUMI B.M. Leumi's, Swift код: LUMIILITXXX, IBAN: IL42 0108 8000 0000 5826 806, Название: Молодёжь Для Хайфы</p>
         <p><strong>Для жителей Израиля</strong> - Банк Leumi, номер счета 05826806, код отделения 880</p>
         <p>Чтобы доставить еду, товары и оборудование, пожалуйста, принесите их по следующему адресу: Улица Рав Охана 4, район Хадар</p>
+        `,
+        sportContent: `
+        <h1>Спорт</h1>
+        <p>Приглашаем на бесплатные тренировки 😃🏃🏽🏋🏼‍♀️</p>
+        <p><strong>Круговая тренировка:</strong> 📅 Понедельник, 21:00, 📍 Парк Гехт. Силовая, функциональная и аэробная тренировка под руководством Лисы! Тренировка подходит для любого уровня!</p>
+        <p><strong>Беговая тренировка:</strong> 📅 Пятница, 8:00, 📍 Старт у пляжа Леонарда. Присоединяйтесь к утреннему бегу под руководством Владимира Берсона! Пробежим 5 км.</p>
+        <p>📝 ссылка на телеграм группу: <a href="https://t.me/ypfh_sport" target="_blank">https://t.me/ypfh_sport</a></p>
         `
     },
     he: {
@@ -66,6 +82,7 @@ const texts = {
         projectsTitle: "פרויקטים",
         ironSwordsProject: "חרבות הברזל",
         cleanupProject: "ניקוי",
+        sportProject: "ספורט",
         eventsTitle: "אירועים קרובים",
         eventsDescription: "עקוב אחר האירועים הקרובים שלנו בלוח השנה למטה:",
         eventsInfo: "לחץ על האירועים בלוח השנה כדי לשמור אותם בלוח השנה שלך ולוודא שלא תפספס אותם.",
@@ -82,6 +99,13 @@ const texts = {
         <p><strong>לתרומות בינלאומיות</strong> - שם הבנק: BANK LEUMI B.M. Leumi's, קוד Swift: LUMIILITXXX, IBAN: IL42 0108 8000 0000 5826 806, שם: צעירים למען חיפה</p>
         <p><strong>לשוכני ישראל</strong> - בנק לאומי, מספר חשבון 05826806, קוד סניף 880</p>
         <p>להבאת מזון, סחורות וציוד, אנא הביאו אותם לכתובת הבאה: רחוב הרב אוחנה 4, רובע הדר</p>
+        `,
+        sportContent: `
+        <h1>ספורט</h1>
+        <p>הזמנה לאימונים חינם 😃🏃🏽🏋🏼‍♀️</p>
+        <p><strong>אימון מעגלי:</strong> 📅 יום שני, 21:00, 📍 פארק חכט. אימון כוח, פונקציונלי ואירובי בהדרכת ליסה! האימון מתאים לכל הרמות!</p>
+        <p><strong>אימון ריצה:</strong> 📅 יום שישי, 8:00, 📍 חוף לאונרדו. הצטרפו לריצת בוקר עם ולדימיר ברסון! נרוץ 5 ק"מ למכון לחקר הימים.</p>
+        <p>📝 קישור לטלגרם: <a href="https://t.me/ypfh_sport" target="_blank">https://t.me/ypfh_sport</a></p>
         `
     }
 };
@@ -102,15 +126,20 @@ function setLanguage(lang) {
         document.getElementById('projects-title').innerText = language.projectsTitle;
         document.getElementById('iron-swords').innerText = language.ironSwordsProject;
         document.getElementById('cleanup-project').innerText = language.cleanupProject;
+        document.getElementById('sport-project').innerText = language.sportProject;
         document.getElementById('events-title').innerText = language.eventsTitle;
         document.getElementById('events-description').innerText = language.eventsDescription;
         document.getElementById('events-info').innerText = language.eventsInfo;
         document.getElementById('social-media-title').innerText = language.socialMediaTitle;
     }
 
-    // Update content on iron-swords.html
+    // Update content on iron-swords.html and sport.html
     if (document.querySelector('.content')) {
-        document.querySelector('.content').innerHTML = language.ironSwordsContent;
+        if (document.querySelector('#IronSwords')) {
+            document.querySelector('.content').innerHTML = language.ironSwordsContent;
+        } else if (document.querySelector('#Sport')) {
+            document.querySelector('.content').innerHTML = language.sportContent;
+        }
     }
 
     // Update the body's language class
