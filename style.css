@@ -187,7 +187,7 @@ section {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .logo-row {
@@ -342,3 +342,4 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+

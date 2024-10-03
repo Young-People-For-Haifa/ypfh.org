@@ -174,3 +174,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Получаем сохранённый язык или используем английский по умолчанию
     setLanguage(savedLanguage); // Устанавливаем язык
 });
+
